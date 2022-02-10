@@ -52,6 +52,9 @@ fetch(queryURL)
 })
 }
 
+// 5 day forecast function
+
+// search API for user's city entered in search bar
 function getForecast(cityName) {
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&appid=713c348493c88760b9f54828487c650d"
   fetch(queryURL)
@@ -64,6 +67,7 @@ function getForecast(cityName) {
       for (let index = 0; index < forecastArray.length; index++) {
         const element = forecastArray[index];
         
+        // algorithm for seperating date into readable order from API
         if (element.dt_txt.endsWith('12:00:00')){
           var year = element.dt_txt.split(' ')[0].split('-')[0];
           var month = element.dt_txt.split(' ')[0].split('-')[1];
@@ -72,11 +76,10 @@ function getForecast(cityName) {
           var forecastTemp = (element.main.temp.toFixed(1));
           var forecastWindspeed = (element.wind.speed.toFixed(1));
           var forecastHumidity = (element.main.humidity);
-
+        
+          // add weather info to cards for 5 day forecast
           var weatherNow = document.querySelector('#weatherNow')
-          var weatherContainer = document.createElement(
-          "div"
-          )
+          var weatherContainer = document.createElement("div")
           weatherContainer.classList.add('col', 's12', 'm2', 'l2')
           weatherContainer.innerHTML=
           `<div class="card blue">
@@ -88,29 +91,13 @@ function getForecast(cityName) {
                   <p>${forecastTemp}°F</p>
                   <p>${forecastWindspeed} MPH</p>
                   <p>${forecastHumidity}% humidity</p>
-          
-            
               </span>
-    </div>
-    </div>`
-    weatherNow.appendChild(weatherContainer)
-
-        }
-  }
-  })
-}
-
-// initialize parralax
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    // var instances = M.Parallax.init(elems, options);
+            </div>
+          </div>`
+        weatherNow.appendChild(weatherContainer)
+      }};
   });
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.parallax').parallax();
-  });
+};
 
 
 // <!-- initalizes plugin for side navigation -->
@@ -118,9 +105,26 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
 });
 
+
+// after search submits via hitting enter, functions for current weather and forecast are called for the searched city
 $('#searchBar').on('submit', function(event){
   var cityName = $('#search').val()
   event.preventDefault();
   getWeather(cityName);
   getForecast(cityName);
+});
+
+// after search submits via clicking button, functions for current weather and forecast are called for the searched city
+$('#searchBtn').on('click', function(event){
+  var cityName = $('#search').val()
+  event.preventDefault();
+  getWeather(cityName);
+  getForecast(cityName);
+});
+
+$('#searchBtn').addEventListener('click', function(event) {
+  var searchedCity = document.querySelector('#search').val;
+
+  localStorage.setItem('previous search', searchedCity);
+  
 });
