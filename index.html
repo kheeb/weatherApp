@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What's Up With the Weather</title>
+    <title>Weather Watch</title>
     
-    <!-- google fonts -->
-    
-
     <!-- materialize + icons + style.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
-
-
 
     <!-- jQuery  -->
     <script
@@ -23,74 +18,54 @@
       crossorigin="anonymous"
     ></script>
 
-
 <head>
-    <body style="background-color:silver">
+    <body style="background-color: grey">
         <container>
-                    <nav>
-                        <div class="nav-wrapper-fixed">
-                            <div class ="pink">
-                                    <a href="#!" class="brand-logo center">Weather Watch</a>
-                                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">search</i></a>
-                            </div>
-                        </div>
-                    </nav>
+            <nav class="background indigo">
+                <div class="nav-wrapper-fixed">
+                    <div>
+                      <a href="#!" class="brand-logo center">Weather Watch</a>
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">search</i></a>
+                    </div>
+                </div>
+            </nav>
 
-                    <ul id="slide-out" class="sidenav">
-                      <li><div class="user-view">
-                            <div class="background">
+                  <ul id="slide-out" class="sidenav">
+                    <li><a class="sidenav-close" href="#!"><i class="material-icons">dehaze</i></a>
+                      <div class="user-view">
+                          <div class="background">
                             <img src="./assets/images/pink-clouds.jpeg">
-                            </div>
+                          </div>
                                 <form id="searchBar">
-                                    <div class="input-field">
+                                  <div class="input-field">
                                     <input class='center-align'id="search" type="search" required>
                                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                     <i class="material-icons">close</i>
-                                    </div>
+                                  </div>
                                 </form>
-                      </div></li>
-                      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-                      <li><a href="#!">Second Link</a></li>
-                      <li><div class="divider"></div></li>
-                      <li><a class="subheader">Subheader</a></li>
-                    </ul>
+                            
+                      </div>
+                    </li>
+                          <li><a class="subheader center-align">my cities</a></li>
+                          <li><div class="divider"></div></li>
+                          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
                           
-
-
-
-
-                        <!-- <ul class="slide-out" id="sidenav">
-                            <li><nav>
-                                <div class="nav-wrapper-fixed">
-                                  <form id="searchBar">
-                                    <div class="input-field">
-                                      <input id="search" type="search" required>
-                                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                      <i class="material-icons">close</i>
-                                    </div>
-                                  </form>
-                                  <li><div class="divider"></div></li>
-                                </div>
-                              </nav>
-                            </li>
-                        </ul> -->
-
-
-            <!-- current weather and five day forecast -->
-                <div id="weatherNow" class="row">
+                          
+                  </ul>
+                      <!-- current weather and five day forecast populate here -->
+                      <div id="weatherNow" class="row"></div>
                
-                </div>
+                      
 
             
             
                 <!-- Insert parallax img -->
-            <div class="parallax-container">
-                <div class="parallax">
-                <img src="./assets/images/pink-clouds.jpeg" alt="sunset pink sky">
-                </div>
-            </div>    
+                    <div class="parallax-container">
+                      <div class="parallax">
+                        <img src="./assets/images/pexels-pixabay-531767.jpeg" alt="sunset pink sky">
+                      </div>
+                    </div>    
 
-         </div>
         </container>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

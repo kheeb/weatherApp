@@ -35,12 +35,12 @@ fetch(queryURL)
     weatherContainer.classList.add('col', 's12', 'm2', 'l2')
     weatherContainer.innerHTML=
     `<div class="card pink accent-1">
-    <div class="card-content white-text">
+    <div class="card-panel indigo card-content white-text">
         <span class="card-title">
             <h6>
-                Today's Weather
+                ${cityName}'s Current Conditions
             </h6>
-            <p>temp: ${weatherData.main.temp.toFixed(1)}C</p>
+            <p>${weatherData.main.temp.toFixed(1)}°F</p>
             <p>wind: ${weatherData.wind.speed.toFixed(1)} MPH</p>
             <p>humidity: ${weatherData.main.humidity}%</p>
             <p>UV index: 
@@ -79,15 +79,15 @@ function getForecast(cityName) {
           )
           weatherContainer.classList.add('col', 's12', 'm2', 'l2')
           weatherContainer.innerHTML=
-          `<div class="card pink accent-1">
+          `<div class="card blue">
              <div class="card-content white-text">
               <span class="card-title">
                   <h6>
                     ${date}
                   </h6>
-                  <p> ${forecastTemp}</p>
-                  <p> ${forecastWindspeed}</p>
-                  <p> ${forecastHumidity}</p>
+                  <p>${forecastTemp}°F</p>
+                  <p>${forecastWindspeed} MPH</p>
+                  <p>${forecastHumidity}% humidity</p>
           
             
               </span>
@@ -123,6 +123,4 @@ $('#searchBar').on('submit', function(event){
   event.preventDefault();
   getWeather(cityName);
   getForecast(cityName);
-
- 
 });
