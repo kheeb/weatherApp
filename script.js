@@ -25,7 +25,7 @@ fetch(queryURL)
     weatherContainer.classList.add('col', 's12', 'm12', 'l12')
     weatherContainer.innerHTML=
     `<div class="card">
-    <div class="card-panel purple card-content white-text">
+    <div class="card-panel purple lighten-2 card-content white-text">
         <span class="card-title">
             <h6>
                 ${cityName}'s Current Conditions
