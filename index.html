@@ -19,43 +19,49 @@
     ></script>
 
 <head>
-    <body style="background-color: grey">
+    <body style="background-color: rgb(210, 199, 255)">
         <container>
-            <nav class="background indigo">
+            <nav class="background-color: orange">
                 <div class="nav-wrapper-fixed">
                     <div>
-                      <a href="#!" class="brand-logo center">Weather Watch</a>
-                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">search</i></a>
+                      <a href="#!" class="brand-logo right">Weather Watch</a>
+                      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons hide-on-large-only">search</i></a>
                     </div>
                 </div>
             </nav>
 
-                  <ul id="slide-out" class="sidenav">
-                    <li><a class="sidenav-close" href="#!"><i class="material-icons">dehaze</i></a>
+                  <ul id="slide-out" class="sidenav sidenav-fixed">
+                    <li><a class="sidenav-close hide-on-large-only" href="#!" data-target="slide-out" class=sidenav-trigger><i class="material-icons hide-on-large-only">dehaze</i></a>
                       <div class="user-view">
+                          <h3>Where should we check the weather?</h3>
                           <div class="background">
                             <img src="./assets/images/pink-clouds.jpeg">
                           </div>
-                                <form id="searchBar">
+                                <form id="searchBar" method="POST">
                                   <div class="input-field">
-                                    <input class='center-align'id="search" placeholder="Enter Location" type="search" required>
+                                    <input class='center-align'id="search" name="search" placeholder="search city" type="search" required>
                                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                    <i class="material-icons">close</i>
                                   </div>
-                                  <a id=searchBtn class="waves-effect waves-light center-align btn">search</a>
+                                  <a id="searchBtn" class="waves-effect waves-light orange btn" type='submit'>search</a>
                                 </form>
-                            
-                      </div>
-                    </li>
                           <li><a class="subheader center-align">my cities</a></li>
                           <li><div class="divider"></div></li>
-                          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                          <ul id='searchedList'></ul>
+                          <li></li>
+                      </div>
+                    </li>
                           
                           
                   </ul>
-              <!-- current weather and five day forecast populate here -->
-                <div id="weatherNow" class="row"></div>
 
+
+        <main>
+              <!-- current weather and five day forecast populate here -->
+              <div id="weatherNow" class='row'></div>
+
+              <div id="weatherLater" class='row'></div>
+        </main>
+        
         </container>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
