@@ -22,6 +22,7 @@ fetch(queryURL)
 
     var weatherNow = document.querySelector('#weatherNow')
     var weatherContainer = document.createElement("div")
+
     weatherContainer.classList.add('col', 's12', 'm12', 'l12')
     weatherContainer.innerHTML=
     `<div class="card">
@@ -33,7 +34,7 @@ fetch(queryURL)
             <p>temperature:${weatherData.main.temp.toFixed(1)}°F</p>
             <p>wind: ${weatherData.wind.speed.toFixed(1)} MPH</p>
             <p>humidity: ${weatherData.main.humidity}%</p>
-            <p>UV Index: ${weatherData.uvi}
+            <p>UV Index: ${weatherData.uvi}</p>
             
             
         </span>
