@@ -12,7 +12,6 @@ Check out the current and future forecast and plan your day or trip accordingly!
  - [Usage](#usage)
  - [Demo](#demo)
  - [License](#license)
- - [Links](#contributing)
  - [Tests](#tests)
  - [Questions](#questions)
 
@@ -33,7 +32,7 @@ SO THAT I can plan a trip accordingly
 If on desktop, simply type within the search bar to specify which city you'd like to check the weather for. Previous searches will populate within a list below the search bar. If on mobile, tap the magnifying glass or slide out the side navigation to access the search bar and previous searched list. If you'd like to delete a city from 'my cities' then press the 'clear' button. Enjoy!
 
 ## Demo
-add your video, QR code, GIF, or link here!
+![weatherWatchPreview](https://user-images.githubusercontent.com/93744725/153785058-090e433f-60de-4fdb-a5cb-4fe28a2900c6.png)
   
 ## License
 MIT is the chosen license for this project.
