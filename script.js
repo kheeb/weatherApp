@@ -28,18 +28,27 @@ fetch(queryURL)
     `<div class="card">
     <div class="card-panel purple lighten-2 card-content white-text">
         <span class="card-title">
-            <h6>
-                ${cityName}'s Current Conditions
-            </h6>
-            <p>temperature:${weatherData.main.temp.toFixed(1)}°F</p>
+            <h5>
+                ${cityName}'s Current Conditions 
+                <br>
+                <br>
+                <br>
+                <i class="medium material-icons center">cloud</i>
+            </h5>
+            <p>temp: ${weatherData.main.temp.toFixed(1)}°F</p>
             <p>wind: ${weatherData.wind.speed.toFixed(1)} MPH</p>
             <p>humidity: ${weatherData.main.humidity}%</p>
-            <p>UV Index: ${weatherData.uvi}</p>
-            
             
         </span>
     </div>
-    </div>`
+    </div>
+    <div class="card">
+    <div class="card-panel purple lighten-3 card-content white-text">
+    <span class="card-title">
+    <h5> ${cityName}'s future five day forecast </h5>
+    </span>
+    </div
+    </div`
     weatherNow.appendChild(weatherContainer)
 })
 }
@@ -70,8 +79,7 @@ function getForecast(cityName) {
           var forecastTemp = (element.main.temp.toFixed(1));
           var forecastWindspeed = (element.wind.speed.toFixed(1));
           var forecastHumidity = (element.main.humidity);
-          var forecastIcon = (element.weather.icon);
-          console.log(element.weather.icon)
+          
 
           // add weather info to cards for 5 day forecast
           var weatherLater = document.querySelector('#weatherLater')
@@ -84,8 +92,8 @@ function getForecast(cityName) {
                   <h6>
                     ${date}
                   </h6>
-                  <p>temperature: ${forecastTemp}°F</p>
-                  <p>${forecastIcon}</p>
+                  <p><i class="medium material-icons center">cloud</i></p>
+                  <p>temp: ${forecastTemp}°F</p>
                   <p>wind: ${forecastWindspeed} MPH</p>
                   <p>humidity: ${forecastHumidity}%</p>
               </span>
