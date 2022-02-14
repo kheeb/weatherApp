@@ -17,7 +17,7 @@ Check out the current and future forecast and plan your day or trip accordingly!
  - [Questions](#questions)
 
 ## Deployment
-deployed link here
+https://kheeb.github.io/weatherApp/
 
 ## Installation
 No installation required! Visit the deployed site on desktop or mobile and enter a city within the search bar to view current and future weather conditions.
