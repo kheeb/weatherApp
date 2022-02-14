@@ -32,11 +32,10 @@ fetch(queryURL)
                 ${cityName}'s Current Conditions 
                 <br>
                 <br>
-                <br>
                 <i class="medium material-icons center">cloud</i>
             </h5>
             <p>temp: ${weatherData.main.temp.toFixed(1)}°F</p>
-            <p>wind: ${weatherData.wind.speed.toFixed(1)} MPH</p>
+            <p>wind: ${weatherData.wind.speed.toFixed(1)}mph</p>
             <p>humidity: ${weatherData.main.humidity}%</p>
             
         </span>
@@ -94,7 +93,7 @@ function getForecast(cityName) {
                   </h6>
                   <p><i class="medium material-icons center">cloud</i></p>
                   <p>temp: ${forecastTemp}°F</p>
-                  <p>wind: ${forecastWindspeed} MPH</p>
+                  <p>wind: ${forecastWindspeed}mph</p>
                   <p>humidity: ${forecastHumidity}%</p>
               </span>
             </div>
